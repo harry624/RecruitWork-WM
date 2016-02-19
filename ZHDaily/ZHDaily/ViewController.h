@@ -7,9 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ToolKit.h"
+#import "LeftMenuViewController.h"
+#import "MainViewController.h"
+
 
 @interface ViewController : UIViewController
 
+- (instancetype)initWithLeftMenu:(LeftMenuViewController *)leftMenuController
+                        MainPage:(MainViewController *)mainPageController;
 
 @end
 

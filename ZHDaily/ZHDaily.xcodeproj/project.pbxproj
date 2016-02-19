@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		05C748FB8933EAA7AF49795E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3052C7DD32AEE939FDCFA1CA /* libPods.a */; };
+		D246CDAA1C76BFA300A73B16 /* LeftMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D246CDA81C76BFA300A73B16 /* LeftMenuViewController.m */; };
+		D246CDAB1C76BFA300A73B16 /* LeftMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D246CDA91C76BFA300A73B16 /* LeftMenuViewController.xib */; };
+		D246CDB81C76C4A000A73B16 /* TopStoriesView.m in Sources */ = {isa = PBXBuildFile; fileRef = D246CDB61C76C4A000A73B16 /* TopStoriesView.m */; };
+		D246CDB91C76C4A000A73B16 /* TopStoriesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D246CDB71C76C4A000A73B16 /* TopStoriesView.xib */; };
+		D246CDBC1C76C4E400A73B16 /* TopstoriesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D246CDBB1C76C4E400A73B16 /* TopstoriesModel.m */; };
+		D246CDBF1C76C4ED00A73B16 /* StoriesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D246CDBE1C76C4ED00A73B16 /* StoriesModel.m */; };
+		D246CDC21C76CE1F00A73B16 /* TopStoriesScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D246CDC11C76CE1F00A73B16 /* TopStoriesScrollView.m */; };
 		D25682721C74B8B400E76CE6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D25682711C74B8B400E76CE6 /* main.m */; };
 		D25682751C74B8B400E76CE6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D25682741C74B8B400E76CE6 /* AppDelegate.m */; };
 		D25682781C74B8B400E76CE6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D25682771C74B8B400E76CE6 /* ViewController.m */; };
@@ -41,6 +48,18 @@
 /* Begin PBXFileReference section */
 		3052C7DD32AEE939FDCFA1CA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		60E3C1F16F3A77D23D531A2D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		D246CDA71C76BFA300A73B16 /* LeftMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LeftMenuViewController.h; path = ZHDaily/LeftMenuViewController.h; sourceTree = SOURCE_ROOT; };
+		D246CDA81C76BFA300A73B16 /* LeftMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LeftMenuViewController.m; path = ZHDaily/LeftMenuViewController.m; sourceTree = SOURCE_ROOT; };
+		D246CDA91C76BFA300A73B16 /* LeftMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LeftMenuViewController.xib; path = ZHDaily/LeftMenuViewController.xib; sourceTree = SOURCE_ROOT; };
+		D246CDB51C76C4A000A73B16 /* TopStoriesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopStoriesView.h; sourceTree = "<group>"; };
+		D246CDB61C76C4A000A73B16 /* TopStoriesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopStoriesView.m; sourceTree = "<group>"; };
+		D246CDB71C76C4A000A73B16 /* TopStoriesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopStoriesView.xib; sourceTree = "<group>"; };
+		D246CDBA1C76C4E400A73B16 /* TopstoriesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopstoriesModel.h; sourceTree = "<group>"; };
+		D246CDBB1C76C4E400A73B16 /* TopstoriesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopstoriesModel.m; sourceTree = "<group>"; };
+		D246CDBD1C76C4ED00A73B16 /* StoriesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoriesModel.h; sourceTree = "<group>"; };
+		D246CDBE1C76C4ED00A73B16 /* StoriesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoriesModel.m; sourceTree = "<group>"; };
+		D246CDC01C76CE1F00A73B16 /* TopStoriesScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopStoriesScrollView.h; sourceTree = "<group>"; };
+		D246CDC11C76CE1F00A73B16 /* TopStoriesScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopStoriesScrollView.m; sourceTree = "<group>"; };
 		D256826D1C74B8B400E76CE6 /* ZHDaily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZHDaily.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D25682711C74B8B400E76CE6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D25682731C74B8B400E76CE6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -61,9 +80,9 @@
 		D25682A91C74BDC700E76CE6 /* NetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetManager.m; sourceTree = "<group>"; };
 		D25682AC1C74C53900E76CE6 /* ToolKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolKit.h; sourceTree = "<group>"; };
 		D25682AD1C74C53900E76CE6 /* ToolKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToolKit.m; sourceTree = "<group>"; };
-		D25682AF1C74CA7700E76CE6 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = NetManager/MainViewController.h; sourceTree = "<group>"; };
-		D25682B01C74CA7700E76CE6 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = NetManager/MainViewController.m; sourceTree = "<group>"; };
-		D25682B11C74CA7700E76CE6 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainViewController.xib; path = NetManager/MainViewController.xib; sourceTree = "<group>"; };
+		D25682AF1C74CA7700E76CE6 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = ../../NetManager/MainViewController.h; sourceTree = "<group>"; };
+		D25682B01C74CA7700E76CE6 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = ../../NetManager/MainViewController.m; sourceTree = "<group>"; };
+		D25682B11C74CA7700E76CE6 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainViewController.xib; path = ../../NetManager/MainViewController.xib; sourceTree = "<group>"; };
 		EEF66DB793273872BA026023 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,6 +129,83 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D246CDAD1C76BFD400A73B16 /* LeftMenu */ = {
+			isa = PBXGroup;
+			children = (
+				D246CDAF1C76BFFD00A73B16 /* Model */,
+				D246CDB01C76BFFD00A73B16 /* View */,
+				D246CDAE1C76BFFD00A73B16 /* Controllers */,
+			);
+			path = LeftMenu;
+			sourceTree = "<group>";
+		};
+		D246CDAE1C76BFFD00A73B16 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D246CDA71C76BFA300A73B16 /* LeftMenuViewController.h */,
+				D246CDA81C76BFA300A73B16 /* LeftMenuViewController.m */,
+				D246CDA91C76BFA300A73B16 /* LeftMenuViewController.xib */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D246CDAF1C76BFFD00A73B16 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D246CDB01C76BFFD00A73B16 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D246CDB11C76C01900A73B16 /* MainPage */ = {
+			isa = PBXGroup;
+			children = (
+				D246CDB31C76C02D00A73B16 /* Model */,
+				D246CDB41C76C02D00A73B16 /* View */,
+				D246CDB21C76C02D00A73B16 /* Controller */,
+			);
+			path = MainPage;
+			sourceTree = "<group>";
+		};
+		D246CDB21C76C02D00A73B16 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D25682AF1C74CA7700E76CE6 /* MainViewController.h */,
+				D25682B01C74CA7700E76CE6 /* MainViewController.m */,
+				D25682B11C74CA7700E76CE6 /* MainViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D246CDB31C76C02D00A73B16 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D246CDBA1C76C4E400A73B16 /* TopstoriesModel.h */,
+				D246CDBB1C76C4E400A73B16 /* TopstoriesModel.m */,
+				D246CDBD1C76C4ED00A73B16 /* StoriesModel.h */,
+				D246CDBE1C76C4ED00A73B16 /* StoriesModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D246CDB41C76C02D00A73B16 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D246CDC01C76CE1F00A73B16 /* TopStoriesScrollView.h */,
+				D246CDC11C76CE1F00A73B16 /* TopStoriesScrollView.m */,
+				D246CDB51C76C4A000A73B16 /* TopStoriesView.h */,
+				D246CDB61C76C4A000A73B16 /* TopStoriesView.m */,
+				D246CDB71C76C4A000A73B16 /* TopStoriesView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		D25682641C74B8B400E76CE6 = {
 			isa = PBXGroup;
 			children = (
@@ -136,11 +232,8 @@
 			isa = PBXGroup;
 			children = (
 				D25682AB1C74C52900E76CE6 /* Utility */,
-				D25682761C74B8B400E76CE6 /* ViewController.h */,
-				D25682771C74B8B400E76CE6 /* ViewController.m */,
-				D25682AF1C74CA7700E76CE6 /* MainViewController.h */,
-				D25682B01C74CA7700E76CE6 /* MainViewController.m */,
-				D25682B11C74CA7700E76CE6 /* MainViewController.xib */,
+				D246CDAD1C76BFD400A73B16 /* LeftMenu */,
+				D246CDB11C76C01900A73B16 /* MainPage */,
 				D25682A71C74BD7A00E76CE6 /* NetManager */,
 				D25682701C74B8B400E76CE6 /* Supporting Files */,
 			);
@@ -152,6 +245,8 @@
 			children = (
 				D25682731C74B8B400E76CE6 /* AppDelegate.h */,
 				D25682741C74B8B400E76CE6 /* AppDelegate.m */,
+				D25682761C74B8B400E76CE6 /* ViewController.h */,
+				D25682771C74B8B400E76CE6 /* ViewController.m */,
 				D25682711C74B8B400E76CE6 /* main.m */,
 				D256827C1C74B8B400E76CE6 /* Assets.xcassets */,
 				D256827E1C74B8B400E76CE6 /* LaunchScreen.storyboard */,
@@ -307,7 +402,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D25682801C74B8B400E76CE6 /* LaunchScreen.storyboard in Resources */,
+				D246CDB91C76C4A000A73B16 /* TopStoriesView.xib in Resources */,
 				D256827D1C74B8B400E76CE6 /* Assets.xcassets in Resources */,
+				D246CDAB1C76BFA300A73B16 /* LeftMenuViewController.xib in Resources */,
 				D25682B31C74CA7700E76CE6 /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -382,11 +479,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				D25682781C74B8B400E76CE6 /* ViewController.m in Sources */,
+				D246CDC21C76CE1F00A73B16 /* TopStoriesScrollView.m in Sources */,
 				D25682B21C74CA7700E76CE6 /* MainViewController.m in Sources */,
+				D246CDB81C76C4A000A73B16 /* TopStoriesView.m in Sources */,
+				D246CDBF1C76C4ED00A73B16 /* StoriesModel.m in Sources */,
 				D25682AE1C74C53900E76CE6 /* ToolKit.m in Sources */,
 				D25682AA1C74BDC700E76CE6 /* NetManager.m in Sources */,
+				D246CDAA1C76BFA300A73B16 /* LeftMenuViewController.m in Sources */,
 				D25682751C74B8B400E76CE6 /* AppDelegate.m in Sources */,
 				D25682721C74B8B400E76CE6 /* main.m in Sources */,
+				D246CDBC1C76C4E400A73B16 /* TopstoriesModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,7 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
+#import "LeftMenuViewController.h"
 #import "MainViewController.h"
+
 #import "ToolKit.h"
 #import "NetManager.h"
 #import <SDWebImage/UIImageView+WebCache.h>
@@ -21,10 +24,12 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
     self.window = [[UIWindow alloc]initWithFrame:kScreenBounds];
-    MainViewController *controller = [[MainViewController alloc]init];
-    UINavigationController *navi = [[UINavigationController alloc]initWithRootViewController:controller];
+    
+    LeftMenuViewController *leftcontroller = [[LeftMenuViewController alloc]init];
+    MainViewController *maincontroller = [[MainViewController alloc]init];
+    ViewController *viewController = [[ViewController alloc]initWithLeftMenu:leftcontroller MainPage:maincontroller];
+    UINavigationController *navi = [[UINavigationController alloc]initWithRootViewController:viewController ];
     self.window.rootViewController = navi;
     [self.window makeKeyAndVisible];
     

@@ -13,8 +13,9 @@ typedef void(^responseSuccessBlock)(id JSON);
 
 @interface NetManager : NSObject
 
-
-
 + (void)getLaunchImageWithsize:(NSString *)size
                        success:(responseSuccessBlock)success;
+
++ (void)getLatestNewsWithsuccess:(responseSuccessBlock)success;
+
 @end
