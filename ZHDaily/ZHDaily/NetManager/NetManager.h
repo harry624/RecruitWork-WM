@@ -9,7 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <AFNetworking.h>
 
-typedef void(^responseSuccessBlock)(id JSON);
+typedef void (^responseSuccessBlock)  (id JSON);
+typedef void (^respoonFailureBlock)   (NSError *error);
 
 @interface NetManager : NSObject
 

@@ -11,10 +11,7 @@
 @interface TopStoriesView : UIView
 
 
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
-@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-
-
-- (void)initwithImage: (UIImage *)image title:(NSString *)title;
+@property (weak, nonatomic)  UIImageView *imageView;
+@property (weak, nonatomic)  UILabel *titleLabel;
 
 @end

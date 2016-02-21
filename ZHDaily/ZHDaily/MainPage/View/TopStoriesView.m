@@ -10,11 +10,18 @@
 
 @implementation TopStoriesView
 
-- (void)initwithImage: (UIImage *)image title:(NSString *)title{
-        self.imageView.image = image;
-        self.titleLabel.text = title;
-
-    
+- (id)initWithFrame:(CGRect)frame{
+    if (self = [super initWithFrame:frame]) {
+        UIImageView *imgView = [[UIImageView alloc]initWithFrame:frame];
+        imgView.contentMode = UIViewContentModeScaleAspectFill;
+        [self addSubview:imgView];
+        _imageView = imgView;
+        
+        UILabel *titleLb = [[UILabel alloc]init];
+        titleLb.numberOfLines = 0;
+        [self addSubview:titleLb];
+        _titleLabel = titleLb;
+    }
+    return self;
 }
-
 @end

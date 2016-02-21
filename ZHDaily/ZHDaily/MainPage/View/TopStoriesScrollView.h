@@ -12,5 +12,5 @@
 
 @property (nonatomic, strong) NSArray *topStories;
 
-
+- (void)setTopStories:(NSArray *)topStories;
 @end

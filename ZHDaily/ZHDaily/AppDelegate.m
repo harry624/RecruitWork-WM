@@ -39,6 +39,7 @@
 }
 
 - (void)setupLaunchPic{
+    //第二张图
     _launchScreenView = [[UIView alloc]initWithFrame:kScreenBounds];
     UIImageView *imageView = [[UIImageView alloc]initWithFrame:kScreenBounds];
     imageView.contentMode = UIViewContentModeScaleAspectFill;
@@ -49,18 +50,20 @@
     [self.launchScreenView addSubview:imageView];
     [self.launchScreenView addSubview:label];
     [self.window addSubview:_launchScreenView];
-    
+    //知乎日报的logo
     _logoImage = [[UIImageView alloc]initWithFrame:kScreenBounds];
     _logoImage.image = [UIImage imageNamed:@"Default"];
     _logoImage.contentMode = UIViewContentModeScaleAspectFill;
     [self.window addSubview:_logoImage];
     
+    //网络请求
     [NetManager getLaunchImageWithsize:@"720*1184" success:^(id JSON) {
         NSString *imageURL = JSON[@"img"];
         [imageView sd_setImageWithURL:[NSURL URLWithString:imageURL] placeholderImage:nil];
         label.text = JSON[@"text"];
     }];
     
+    //设置动画
     [UIView animateWithDuration:4 animations:^{
         self.logoImage.alpha = 0;
         imageView.transform = CGAffineTransformMakeScale(1.2, 1.2);
@@ -69,8 +72,6 @@
         [self.launchScreenView removeFromSuperview];
     }];
 }
-
-
 
 - (void)applicationWillResignActive:(UIApplication *)application {
 

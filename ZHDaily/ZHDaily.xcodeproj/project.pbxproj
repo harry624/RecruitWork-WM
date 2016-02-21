@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		05C748FB8933EAA7AF49795E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3052C7DD32AEE939FDCFA1CA /* libPods.a */; };
 		D246CDB81C76C4A000A73B16 /* TopStoriesView.m in Sources */ = {isa = PBXBuildFile; fileRef = D246CDB61C76C4A000A73B16 /* TopStoriesView.m */; };
-		D246CDB91C76C4A000A73B16 /* TopStoriesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D246CDB71C76C4A000A73B16 /* TopStoriesView.xib */; };
 		D246CDBC1C76C4E400A73B16 /* TopstoriesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D246CDBB1C76C4E400A73B16 /* TopstoriesModel.m */; };
 		D246CDBF1C76C4ED00A73B16 /* StoriesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D246CDBE1C76C4ED00A73B16 /* StoriesModel.m */; };
 		D246CDC21C76CE1F00A73B16 /* TopStoriesScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D246CDC11C76CE1F00A73B16 /* TopStoriesScrollView.m */; };
@@ -26,6 +25,8 @@
 		D25682961C74B8B400E76CE6 /* ZHDailyUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D25682951C74B8B400E76CE6 /* ZHDailyUITests.m */; };
 		D25682AA1C74BDC700E76CE6 /* NetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D25682A91C74BDC700E76CE6 /* NetManager.m */; };
 		D25682AE1C74C53900E76CE6 /* ToolKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D25682AD1C74C53900E76CE6 /* ToolKit.m */; };
+		D27995B01C79650A0028D2D6 /* StoriesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D27995AE1C79650A0028D2D6 /* StoriesTableViewCell.m */; };
+		D27995B11C79650A0028D2D6 /* StoriesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D27995AF1C79650A0028D2D6 /* StoriesTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +51,6 @@
 		60E3C1F16F3A77D23D531A2D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		D246CDB51C76C4A000A73B16 /* TopStoriesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopStoriesView.h; sourceTree = "<group>"; };
 		D246CDB61C76C4A000A73B16 /* TopStoriesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopStoriesView.m; sourceTree = "<group>"; };
-		D246CDB71C76C4A000A73B16 /* TopStoriesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopStoriesView.xib; sourceTree = "<group>"; };
 		D246CDBA1C76C4E400A73B16 /* TopstoriesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopstoriesModel.h; sourceTree = "<group>"; };
 		D246CDBB1C76C4E400A73B16 /* TopstoriesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopstoriesModel.m; sourceTree = "<group>"; };
 		D246CDBD1C76C4ED00A73B16 /* StoriesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoriesModel.h; sourceTree = "<group>"; };
@@ -83,6 +83,9 @@
 		D25682A91C74BDC700E76CE6 /* NetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetManager.m; sourceTree = "<group>"; };
 		D25682AC1C74C53900E76CE6 /* ToolKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolKit.h; sourceTree = "<group>"; };
 		D25682AD1C74C53900E76CE6 /* ToolKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToolKit.m; sourceTree = "<group>"; };
+		D27995AD1C79650A0028D2D6 /* StoriesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoriesTableViewCell.h; sourceTree = "<group>"; };
+		D27995AE1C79650A0028D2D6 /* StoriesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoriesTableViewCell.m; sourceTree = "<group>"; };
+		D27995AF1C79650A0028D2D6 /* StoriesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StoriesTableViewCell.xib; sourceTree = "<group>"; };
 		EEF66DB793273872BA026023 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -201,7 +204,9 @@
 				D246CDC11C76CE1F00A73B16 /* TopStoriesScrollView.m */,
 				D246CDB51C76C4A000A73B16 /* TopStoriesView.h */,
 				D246CDB61C76C4A000A73B16 /* TopStoriesView.m */,
-				D246CDB71C76C4A000A73B16 /* TopStoriesView.xib */,
+				D27995AD1C79650A0028D2D6 /* StoriesTableViewCell.h */,
+				D27995AE1C79650A0028D2D6 /* StoriesTableViewCell.m */,
+				D27995AF1C79650A0028D2D6 /* StoriesTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -402,10 +407,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D25682801C74B8B400E76CE6 /* LaunchScreen.storyboard in Resources */,
-				D246CDB91C76C4A000A73B16 /* TopStoriesView.xib in Resources */,
 				D246CDC81C77658B00A73B16 /* MainViewController.xib in Resources */,
 				D246CDD21C7765B500A73B16 /* LeftMenuViewController.xib in Resources */,
 				D256827D1C74B8B400E76CE6 /* Assets.xcassets in Resources */,
+				D27995B11C79650A0028D2D6 /* StoriesTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,6 +484,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D246CDC71C77658B00A73B16 /* MainViewController.m in Sources */,
+				D27995B01C79650A0028D2D6 /* StoriesTableViewCell.m in Sources */,
 				D25682781C74B8B400E76CE6 /* ViewController.m in Sources */,
 				D246CDC21C76CE1F00A73B16 /* TopStoriesScrollView.m in Sources */,
 				D246CDB81C76C4A000A73B16 /* TopStoriesView.m in Sources */,

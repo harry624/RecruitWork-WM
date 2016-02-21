@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 @interface TopstoriesModel : NSObject
 
-@property (nonatomic, strong) NSString *images;
+@property (nonatomic, strong) NSString *image;
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSNumber *topStoriesid;
 
