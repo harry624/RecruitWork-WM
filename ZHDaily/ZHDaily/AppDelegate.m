@@ -7,10 +7,9 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
 #import "LeftMenuViewController.h"
 #import "MainViewController.h"
-
+#import "MainPageViewModel.h"
 #import "ToolKit.h"
 #import "NetManager.h"
 #import <SDWebImage/UIImageView+WebCache.h>
@@ -27,12 +26,15 @@
     self.window = [[UIWindow alloc]initWithFrame:kScreenBounds];
     
     LeftMenuViewController *leftcontroller = [[LeftMenuViewController alloc]init];
-    MainViewController *maincontroller = [[MainViewController alloc]init];
+    MainViewController *maincontroller = [[MainViewController alloc]initWithViewModel:[MainPageViewModel new]];
     ViewController *viewController = [[ViewController alloc]initWithLeftMenu:leftcontroller MainPage:maincontroller];
     UINavigationController *navi = [[UINavigationController alloc]initWithRootViewController:viewController ];
     self.window.rootViewController = navi;
     [self.window makeKeyAndVisible];
     
+
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+
     [self setupLaunchPic];
     
     return YES;

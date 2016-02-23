@@ -19,4 +19,6 @@ typedef void (^respoonFailureBlock)   (NSError *error);
 
 + (void)getLatestNewsWithsuccess:(responseSuccessBlock)success;
 
++ (void)getPreviousNewsWithdate:(NSString *)string
+                       success:(responseSuccessBlock)success;
 @end

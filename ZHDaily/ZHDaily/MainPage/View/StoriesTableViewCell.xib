@@ -7,7 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="65" id="KGk-i7-Jjw" customClass="StoriesTableViewCell">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="65" id="KGk-i7-Jjw" customClass="StoriesTableViewCell">
             <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -48,10 +48,9 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="MutiImgView" destination="F0O-rg-o3M" id="rvp-Bn-Tvt"/>
-                <outlet property="imageView" destination="IDl-Lf-lwu" id="8TD-Fd-Edl"/>
-                <outlet property="storyImageView" destination="IDl-Lf-lwu" id="54U-ue-4Q1"/>
-                <outlet property="titleLabel" destination="rql-RE-h0y" id="mk1-MY-hU5"/>
+                <outlet property="imgView" destination="IDl-Lf-lwu" id="hzT-Ym-Pn9"/>
+                <outlet property="mutiImgView" destination="F0O-rg-o3M" id="wwB-ie-QGg"/>
+                <outlet property="titleLabel" destination="rql-RE-h0y" id="g4t-AA-laa"/>
             </connections>
             <point key="canvasLocation" x="274" y="402"/>
         </tableViewCell>

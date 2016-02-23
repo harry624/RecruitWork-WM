@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "StoriesModel.h"
 @interface StoriesTableViewCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *storyImageView;
-@property (weak, nonatomic) IBOutlet UIImageView *MutiImgView;
+
+@property (nonatomic, strong) StoriesModel *model;
 
 
+- (void)setStoryModel:(StoriesModel *)model;
 @end

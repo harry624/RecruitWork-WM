@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		05C748FB8933EAA7AF49795E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3052C7DD32AEE939FDCFA1CA /* libPods.a */; };
+		D23C5A3F1C7C299800B620A9 /* MainPageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D23C5A3E1C7C299800B620A9 /* MainPageViewModel.m */; };
+		D23C5A441C7C33BE00B620A9 /* NSDateFormatter+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = D23C5A431C7C33BE00B620A9 /* NSDateFormatter+Category.m */; };
 		D246CDB81C76C4A000A73B16 /* TopStoriesView.m in Sources */ = {isa = PBXBuildFile; fileRef = D246CDB61C76C4A000A73B16 /* TopStoriesView.m */; };
 		D246CDBC1C76C4E400A73B16 /* TopstoriesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D246CDBB1C76C4E400A73B16 /* TopstoriesModel.m */; };
 		D246CDBF1C76C4ED00A73B16 /* StoriesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D246CDBE1C76C4ED00A73B16 /* StoriesModel.m */; };
 		D246CDC21C76CE1F00A73B16 /* TopStoriesScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D246CDC11C76CE1F00A73B16 /* TopStoriesScrollView.m */; };
 		D246CDC71C77658B00A73B16 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D246CDC51C77658B00A73B16 /* MainViewController.m */; };
-		D246CDC81C77658B00A73B16 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D246CDC61C77658B00A73B16 /* MainViewController.xib */; };
 		D246CDD11C7765B500A73B16 /* LeftMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D246CDCF1C7765B500A73B16 /* LeftMenuViewController.m */; };
 		D246CDD21C7765B500A73B16 /* LeftMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D246CDD01C7765B500A73B16 /* LeftMenuViewController.xib */; };
 		D25682721C74B8B400E76CE6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D25682711C74B8B400E76CE6 /* main.m */; };
@@ -49,6 +50,10 @@
 /* Begin PBXFileReference section */
 		3052C7DD32AEE939FDCFA1CA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		60E3C1F16F3A77D23D531A2D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		D23C5A3D1C7C299800B620A9 /* MainPageViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainPageViewModel.h; sourceTree = "<group>"; };
+		D23C5A3E1C7C299800B620A9 /* MainPageViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainPageViewModel.m; sourceTree = "<group>"; };
+		D23C5A421C7C33BE00B620A9 /* NSDateFormatter+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+Category.h"; sourceTree = "<group>"; };
+		D23C5A431C7C33BE00B620A9 /* NSDateFormatter+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+Category.m"; sourceTree = "<group>"; };
 		D246CDB51C76C4A000A73B16 /* TopStoriesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopStoriesView.h; sourceTree = "<group>"; };
 		D246CDB61C76C4A000A73B16 /* TopStoriesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopStoriesView.m; sourceTree = "<group>"; };
 		D246CDBA1C76C4E400A73B16 /* TopstoriesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopstoriesModel.h; sourceTree = "<group>"; };
@@ -60,7 +65,6 @@
 		D246CDC31C77656F00A73B16 /* ServerIP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServerIP.h; sourceTree = "<group>"; };
 		D246CDC41C77658B00A73B16 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		D246CDC51C77658B00A73B16 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		D246CDC61C77658B00A73B16 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		D246CDCE1C7765B500A73B16 /* LeftMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftMenuViewController.h; sourceTree = "<group>"; };
 		D246CDCF1C7765B500A73B16 /* LeftMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftMenuViewController.m; sourceTree = "<group>"; };
 		D246CDD01C7765B500A73B16 /* LeftMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftMenuViewController.xib; sourceTree = "<group>"; };
@@ -132,6 +136,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D23C5A3C1C7C288900B620A9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D23C5A3D1C7C299800B620A9 /* MainPageViewModel.h */,
+				D23C5A3E1C7C299800B620A9 /* MainPageViewModel.m */,
+			);
+			name = ViewModel;
+			path = ZHDaily/MainPage/ViewModel;
+			sourceTree = SOURCE_ROOT;
+		};
 		D246CDAD1C76BFD400A73B16 /* LeftMenu */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +185,7 @@
 			children = (
 				D246CDB31C76C02D00A73B16 /* Model */,
 				D246CDB41C76C02D00A73B16 /* View */,
+				D23C5A3C1C7C288900B620A9 /* ViewModel */,
 				D246CDB21C76C02D00A73B16 /* Controller */,
 			);
 			path = MainPage;
@@ -181,7 +196,6 @@
 			children = (
 				D246CDC41C77658B00A73B16 /* MainViewController.h */,
 				D246CDC51C77658B00A73B16 /* MainViewController.m */,
-				D246CDC61C77658B00A73B16 /* MainViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -293,6 +307,8 @@
 			children = (
 				D25682AC1C74C53900E76CE6 /* ToolKit.h */,
 				D25682AD1C74C53900E76CE6 /* ToolKit.m */,
+				D23C5A421C7C33BE00B620A9 /* NSDateFormatter+Category.h */,
+				D23C5A431C7C33BE00B620A9 /* NSDateFormatter+Category.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -407,7 +423,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D25682801C74B8B400E76CE6 /* LaunchScreen.storyboard in Resources */,
-				D246CDC81C77658B00A73B16 /* MainViewController.xib in Resources */,
 				D246CDD21C7765B500A73B16 /* LeftMenuViewController.xib in Resources */,
 				D256827D1C74B8B400E76CE6 /* Assets.xcassets in Resources */,
 				D27995B11C79650A0028D2D6 /* StoriesTableViewCell.xib in Resources */,
@@ -486,6 +501,8 @@
 				D246CDC71C77658B00A73B16 /* MainViewController.m in Sources */,
 				D27995B01C79650A0028D2D6 /* StoriesTableViewCell.m in Sources */,
 				D25682781C74B8B400E76CE6 /* ViewController.m in Sources */,
+				D23C5A441C7C33BE00B620A9 /* NSDateFormatter+Category.m in Sources */,
+				D23C5A3F1C7C299800B620A9 /* MainPageViewModel.m in Sources */,
 				D246CDC21C76CE1F00A73B16 /* TopStoriesScrollView.m in Sources */,
 				D246CDB81C76C4A000A73B16 /* TopStoriesView.m in Sources */,
 				D246CDBF1C76C4ED00A73B16 /* StoriesModel.m in Sources */,
@@ -628,6 +645,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				INFOPLIST_FILE = ZHDaily/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = harrywang.ZHDaily;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -641,6 +659,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				INFOPLIST_FILE = ZHDaily/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = harrywang.ZHDaily;
 				PRODUCT_NAME = "$(TARGET_NAME)";

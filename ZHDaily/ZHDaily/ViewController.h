@@ -17,5 +17,7 @@
 - (instancetype)initWithLeftMenu:(LeftMenuViewController *)leftMenuController
                         MainPage:(MainViewController *)mainPageController;
 
+- (void)showLeftMenu;
+
 @end
 

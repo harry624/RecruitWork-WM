@@ -8,8 +8,27 @@
 
 #import "StoriesTableViewCell.h"
 #import "StoriesModel.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
+@interface StoriesTableViewCell ()
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *imgView;
+@property (weak, nonatomic) IBOutlet UIImageView *mutiImgView;
+
+@end
 @implementation StoriesTableViewCell
+
+- (void)setStoryModel:(StoriesModel *)model{
+    NSString *title = model.title;
+    self.titleLabel.text = title;
+    [self.imgView sd_setImageWithURL:[NSURL URLWithString:model.images.firstObject]];
+    if (model.isMultipic) {
+        self.mutiImgView.hidden = NO;
+        self.mutiImgView.image = [UIImage imageNamed:@"Home_Morepic"];
+    }else{
+        self.mutiImgView.hidden = YES;
+    }
+}
 
 - (void)awakeFromNib {
     // Initialization code
@@ -20,5 +39,6 @@
 
     // Configure the view for the selected state
 }
+
 
 @end

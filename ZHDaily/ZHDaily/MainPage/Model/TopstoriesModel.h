@@ -14,4 +14,5 @@
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSNumber *topStoriesid;
 
+- (instancetype)initWithDictionary:(NSDictionary *)dic;
 @end

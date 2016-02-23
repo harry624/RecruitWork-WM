@@ -27,19 +27,43 @@
 #pragma mark - init
 - (instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
+        self.topStories = [[NSArray alloc]init];
         _tapGesture = [[UIGestureRecognizer alloc]initWithTarget:self action:@selector(tap:)];
+        self.topStories = [NSArray array];
         [self configureScrollView];
         [self configurePageControl];
-//        _timer = [NSTimer scheduledTimerWithTimeInterval:5.0f target:self selector:@selector(nextTopStory) userInfo:nil repeats:YES];
     }
     return self;
+}
+
+- (void)setTopStories:(NSArray *)topStories{
+    [_timer invalidate];
+    _pageControl.numberOfPages = topStories.count - 2;
+    _pageControl.currentPage = 0;
+    _scrollView.contentOffset = CGPointMake(kScreenWidth, 0);
+    
+    for (int i = 0; i < topStories.count; i++) {
+        TopstoriesModel *model = topStories[i];
+        view = [_scrollView viewWithTag:100+i];
+        [view.imageView sd_setImageWithURL:[NSURL URLWithString:model.image]];
+        
+        NSAttributedString *attributedString = [[NSAttributedString alloc]initWithString:model.title attributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:20],
+                                                                                                                  NSForegroundColorAttributeName:[UIColor whiteColor]}];
+        CGSize size = [attributedString boundingRectWithSize:CGSizeMake(kScreenWidth - 20, 200) options:NSStringDrawingUsesFontLeading | NSStringDrawingUsesLineFragmentOrigin context:nil].size;
+        view.titleLabel.frame = CGRectMake(15, 0, kScreenWidth - 30, size.height);
+        
+        CGRect frame = view.titleLabel.frame;
+        frame.origin.y = kScrollViewHeiget - frame.size.height - 20;
+        view.titleLabel.frame = frame;
+        [view.titleLabel setAttributedText:attributedString];
+    }
+    _timer = [NSTimer scheduledTimerWithTimeInterval:5.0f target:self selector:@selector(nextTopStory) userInfo:nil repeats:YES];
 }
 
 #pragma mark - Configurations
 - (void)configureScrollView{
     _scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, kScrollViewHeiget)];
-    _scrollView.contentSize = CGSizeMake(kScreenWidth * 7, kScrollViewHeiget);
-    _scrollView.contentOffset = CGPointMake(kScreenWidth, 0);
+    _scrollView.contentSize = CGSizeMake(kScreenWidth * 7, 0);
     _scrollView.pagingEnabled = YES;
     _scrollView.showsHorizontalScrollIndicator = NO;
     _scrollView.delegate = self;
@@ -57,33 +81,14 @@
     _pageControl = [[UIPageControl alloc]initWithFrame:CGRectMake(0, self.frame.size.height - 20.f, kScreenWidth, 20.f)];
     _pageControl.currentPageIndicatorTintColor = [UIColor whiteColor];
     _pageControl.pageIndicatorTintColor = [UIColor grayColor];
-    _pageControl.currentPage = 0;
+    _pageControl.enabled = NO;
     [self addSubview:_pageControl];
 }
 
-- (void)setTopStories:(NSArray *)topStories{
-        _pageControl.numberOfPages = topStories.count - 2;
-    for (int i = 0; i < topStories.count; i++) {
-        TopstoriesModel *model = topStories[i];
-        view = [_scrollView viewWithTag:100+i];
-        [view.imageView sd_setImageWithURL:[NSURL URLWithString:model.image]];
-
-        NSAttributedString *attributedString = [[NSAttributedString alloc]initWithString:model.title attributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:20],
-              NSForegroundColorAttributeName:[UIColor whiteColor]}];
-        CGSize size = [attributedString boundingRectWithSize:CGSizeMake(kScreenWidth - 20, 200) options:NSStringDrawingUsesFontLeading | NSStringDrawingUsesLineFragmentOrigin context:nil].size;
-        view.titleLabel.frame = CGRectMake(15, 0, kScreenWidth - 30, size.height);
-        
-        CGRect frame = view.titleLabel.frame;
-        frame.origin.y = kScrollViewHeiget - frame.size.height - 20;
-        view.titleLabel.frame = frame;
-        [view.titleLabel setAttributedText:attributedString];
-        NSLog(@"%d:%@,%@",i,model.image,model.title);
-    }
-}
 
 #pragma mark - Next page
 - (void)nextTopStory{
-    [_scrollView setContentOffset:CGPointMake(_scrollView.contentOffset.x + kScreenWidth,0) animated:YES];
+    [_scrollView setContentOffset:CGPointMake(kScreenWidth + _scrollView.contentOffset.x ,0) animated:YES];
 }
 
 - (void)tap:(UIGestureRecognizer*)recoginizer{

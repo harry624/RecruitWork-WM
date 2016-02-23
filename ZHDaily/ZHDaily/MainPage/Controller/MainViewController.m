@@ -5,108 +5,138 @@
 //  Created by 王豪 on 16/2/17.
 //  Copyright © 2016年 hao. All rights reserved.
 //
-
+#import "AppDelegate.h"
+#import "ViewController.h"
 #import "MainViewController.h"
 #import "NetManager.h"
 #import "ToolKit.h"
 #import "TopstoriesModel.h"
 #import "StoriesModel.h"
+#import "MainPageViewModel.h"
 #import "TopStoriesScrollView.h"
 #import "StoriesTableViewCell.h"
 
-@interface MainViewController ()<UITableViewDataSource, UITableViewDelegate>{
-    UITableView *mainTableView;
-    TopStoriesScrollView *scrollView;
+@interface MainViewController ()<UITableViewDataSource, UITableViewDelegate,UIScrollViewDelegate>{
+    UITableView *_mainTableView;
+    TopStoriesScrollView *_scrollView;
     
 }
 @property (nonatomic, strong) NSArray <TopstoriesModel *> *topStoiresModelArray;
-@property (nonatomic, strong) NSArray <StoriesModel *> *storiesModelArray;
+@property (nonatomic, strong) MainPageViewModel *viewmodel;
+@property (nonatomic, strong) UIView *naviBarView;
+@property(weak,nonatomic)UILabel *newsTodayLb;
 
 @end
 
-@implementation MainViewController
+@implementation MainViewController{
+    NSArray *_storiesModelArray;
+}
+
+- (instancetype)initWithViewModel:(MainPageViewModel *)viewModel{
+    self = [super init];
+    if (self) {
+        self.viewmodel = viewModel;
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadingLatestDaily:) name:@"LoadLatestDaily" object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadingPreviousDaily:) name:@"LoadPreviousDaily" object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateLatestDaily:) name:@"UpdateLatestDaily" object:nil];
+        
+        [self.viewmodel getLatestStories];
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self getLatestNews];
     [self setupSubViews];
+    [self setupNavibar];
 }
-
-- (void)getLatestNews{
-    [NetManager getLatestNewsWithsuccess:^(id JSON) {
-        [self serilizeTopStories:JSON[@"top_stories"]];
-        [self serilizeStories:JSON[@"stories"]];
-    }];
-}
-
+#pragma mark - View Configurations
 - (void)setupSubViews{
-    scrollView = [[TopStoriesScrollView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, kScrollViewHeiget)];
+    _scrollView = [[TopStoriesScrollView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, kScrollViewHeiget)];
+    _scrollView.clipsToBounds = YES;
+
+    _mainTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
+    _mainTableView.dataSource = self;
+    _mainTableView.delegate = self;
+    [_mainTableView registerNib:[UINib nibWithNibName:@"StoriesTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"Cell"];
+    _mainTableView.tableHeaderView = _scrollView;
+    [self.view addSubview:_mainTableView];
+}
+
+- (void)setupNavibar{
+    UIView *naviagtionBarView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, 56.f)];
+    naviagtionBarView.backgroundColor = [UIColor colorWithRed:60.f/255.f green:198.f/255.f blue:253.f/255.f alpha:0.f];
+    [self.view addSubview:naviagtionBarView];
+    _naviBarView = naviagtionBarView;
     
-    mainTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
-    mainTableView.dataSource = self;
-    mainTableView.delegate = self;
-    mainTableView.tableHeaderView = scrollView;
-    [self.view addSubview:mainTableView];
+    UILabel *label = [[UILabel alloc]init];
+    label.attributedText = [[NSAttributedString alloc]initWithString:@"今日新闻" attributes:
+                            @{NSFontAttributeName: [UIFont boldSystemFontOfSize:18], NSForegroundColorAttributeName: [UIColor whiteColor]}];
+    [label sizeToFit];
+    [label setCenter:CGPointMake(self.view.center.x, 38)];
+    [self.view addSubview:label];
+    _newsTodayLb = label;
     
-    [mainTableView registerNib:[UINib nibWithNibName:@"StoriesTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"Cell"];
+    UIButton *menuButton = [[UIButton alloc]initWithFrame:CGRectMake(_newsTodayLb.frame.origin.x - 20.f, _newsTodayLb.center.y - 10.f, 20.f, 20.f)];
+    [menuButton setImage:[UIImage imageNamed:@"Home_Icon"] forState:UIControlStateNormal];
+    [menuButton addTarget:self action:@selector(showleftMenu:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:menuButton];
+
+}
+
+#pragma mark - Noitifications
+- (void)loadingLatestDaily:(NSNotification *)noti{
+    NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:0];
+    [_mainTableView insertSections:indexSet withRowAnimation:UITableViewRowAnimationFade];
+    [self setTopStoriesContent];
+}
+
+- (void)loadingPreviousDaily:(NSNotification *)noti{
     
+}
+
+- (void)updateLatestDaily:(NSNotification *)noti{
+    
+}
+
+#pragma mark - Methods
+- (void)setTopStoriesContent{
+    [_scrollView setTopStories:self.viewmodel.topstories];
+}
+
+- (void)showleftMenu:(id)sender{
+    AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    [delegate.viewController showLeftMenu];
 }
 
 #pragma mark - Table View DataSource
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 1;
+    NSInteger number =[self.viewmodel numberOfSection];
+    return number;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return self.storiesModelArray.count;
+    NSInteger numberOfRows =[self.viewmodel numberOfRowsInSection:section];
+    return numberOfRows;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     StoriesTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
-    if (cell == nil) {
-        cell = [[StoriesTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
-        cell.titleLabel.text = self.storiesModelArray[indexPath.row].title;
-        
-    }
+        cell = [[StoriesTableViewCell alloc]init];
+        StoriesModel *model = [self.viewmodel storyAtIndexPath:indexPath];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        [cell setStoryModel:model];
         return cell;
 }
 
 
 #pragma mark - Table View Delegate
-
-
-#pragma mark - 解析TopStories 和Stories
-- (void)serilizeTopStories:(NSArray *)array{
-    NSMutableArray *topStoiresArray = [NSMutableArray array];
-    for (NSDictionary *topStory in array) {
-        TopstoriesModel *model = [[TopstoriesModel alloc]init];
-        model.image = topStory[@"image"];
-        model.title = topStory[@"title"];
-        model.topStoriesid = topStory[@"id"];
-        [topStoiresArray addObject:model];
-    }
-    TopstoriesModel *firstTopStory = [topStoiresArray firstObject];
-    TopstoriesModel *lastTopStroy = [topStoiresArray lastObject];
-    [topStoiresArray insertObject:lastTopStroy atIndex:0];
-    [topStoiresArray addObject:firstTopStory];
-    self.topStoiresModelArray = [topStoiresArray copy];
-    
-    [scrollView setTopStories:self.topStoiresModelArray];
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 88.f;
 }
 
-- (NSArray *)serilizeStories:(NSArray *)array{
-    NSMutableArray *stoiresArray = [NSMutableArray array];
-    for (NSDictionary *story in array) {
-        StoriesModel *model = [[StoriesModel alloc]init];
-        model.images = story[@"images"];
-        model.storyID = story[@"id"];
-        model.title = story[@"title"];
-        [stoiresArray addObject:model];
-    }
-    self.storiesModelArray = [stoiresArray copy];
-    return self.storiesModelArray;
-}
+
 
 
 

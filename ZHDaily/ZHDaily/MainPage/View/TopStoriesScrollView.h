@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface TopStoriesScrollView : UIView
 
 @property (nonatomic, strong) NSArray *topStories;

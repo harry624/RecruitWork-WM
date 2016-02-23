@@ -7,12 +7,12 @@
 //
 
 #import "TopStoriesView.h"
-
+#import "ToolKit.h"
 @implementation TopStoriesView
 
 - (id)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
-        UIImageView *imgView = [[UIImageView alloc]initWithFrame:frame];
+        UIImageView *imgView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, kScrollViewHeiget)];
         imgView.contentMode = UIViewContentModeScaleAspectFill;
         [self addSubview:imgView];
         _imageView = imgView;

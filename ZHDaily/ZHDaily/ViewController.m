@@ -27,6 +27,10 @@
 
 @implementation ViewController
 
+- (UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
+}
+
 - (instancetype)initWithLeftMenu:(LeftMenuViewController *)leftMenuController
                         MainPage:(MainViewController *)mainPageController{
     if (self = [super init]) {
@@ -36,6 +40,10 @@
     return self;
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self setNeedsStatusBarAppearanceUpdate];
+}
 - (void)viewDidLoad{
     _distance = MainViewOriginXFromValue;
     _leftMenuView = _leftMenuController.view;

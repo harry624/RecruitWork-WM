@@ -53,6 +53,16 @@
 }
 
 
++ (void)getPreviousNewsWithdate:(NSString *)string
+                       success:(responseSuccessBlock)success{
+    NSString *previousNewsURL = [kIP_Prefix stringByAppendingString:@"news/before/"];
+    NSString *previousNewsURLDate = [previousNewsURL stringByAppendingString:string];
+    [self getJSONDataWithURLString:previousNewsURLDate success:^(id JSON) {
+        success(JSON);
+    } failure:^(NSError *error) {
+        NSLog(@"%@", error);
+    }];
+}
 
 
 

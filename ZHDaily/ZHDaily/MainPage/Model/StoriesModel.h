@@ -15,5 +15,7 @@
 @property(copy,nonatomic)NSString *title;
 @property(assign,nonatomic)BOOL isMultipic;
 
+- (instancetype)initWithDictionary:(NSDictionary *)dic;
+
 
 @end
