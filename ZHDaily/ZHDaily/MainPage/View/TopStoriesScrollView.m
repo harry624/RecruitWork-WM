@@ -62,15 +62,16 @@
 
 #pragma mark - Configurations
 - (void)configureScrollView{
-    _scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, kScrollViewHeiget)];
+    _scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, 300.f)];
     _scrollView.contentSize = CGSizeMake(kScreenWidth * 7, 0);
     _scrollView.pagingEnabled = YES;
     _scrollView.showsHorizontalScrollIndicator = NO;
+    _scrollView.showsVerticalScrollIndicator = NO;
     _scrollView.delegate = self;
     [self addSubview:_scrollView];
 
     for (int i = 0; i < 7; i++) {
-        view = [[TopStoriesView alloc]initWithFrame:CGRectMake(kScreenWidth * i, 0, kScreenWidth, kScrollViewHeiget)];
+        view = [[TopStoriesView alloc]initWithFrame:CGRectMake(kScreenWidth * i, 0, kScreenWidth, 300.f)];
         [view addGestureRecognizer:_tapGesture];
         [view setTag:100+ i];
         [_scrollView addSubview:view];
@@ -92,7 +93,7 @@
 }
 
 - (void)tap:(UIGestureRecognizer*)recoginizer{
-    
+    [self.delegate selectItemWithTag:recoginizer.view.tag];
 }
 
 #pragma mark - Scroll View Delegate
@@ -109,8 +110,9 @@
         _pageControl.currentPage = offsetX/kScreenWidth - 1;
     }
 }
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
 
-}
+- (void)updateSubViewOriginY:(CGFloat)value{
+
+ }
 
 @end

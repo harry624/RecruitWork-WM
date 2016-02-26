@@ -13,7 +13,7 @@
 #define kScreenWidth        [UIScreen mainScreen].bounds.size.width
 #define kScreenBounds       [UIScreen mainScreen].bounds
 #define kScrollViewHeiget   260.f
-
+#define kCellHeight         88.f
 @interface ToolKit : NSObject
 
 @end

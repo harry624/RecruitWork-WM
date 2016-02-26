@@ -27,11 +27,11 @@
     
     LeftMenuViewController *leftcontroller = [[LeftMenuViewController alloc]init];
     MainViewController *maincontroller = [[MainViewController alloc]initWithViewModel:[MainPageViewModel new]];
-    ViewController *viewController = [[ViewController alloc]initWithLeftMenu:leftcontroller MainPage:maincontroller];
-    UINavigationController *navi = [[UINavigationController alloc]initWithRootViewController:viewController ];
+    _viewController = [[ViewController alloc]initWithLeftMenu:leftcontroller MainPage:maincontroller];
+    UINavigationController *navi = [[UINavigationController alloc]initWithRootViewController:_viewController ];
     self.window.rootViewController = navi;
     [self.window makeKeyAndVisible];
-    
+    navi.navigationBarHidden = YES;
 
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 

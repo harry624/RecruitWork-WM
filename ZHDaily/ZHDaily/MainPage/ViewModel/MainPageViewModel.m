@@ -160,7 +160,7 @@
         SectionViewModel *vm = [[SectionViewModel alloc]initWithDictionary:jsonDic];
         [_dayDataList addObject:vm];
         [_storiesID addObjectsFromArray:[vm valueForKeyPath:@"sectionDataSource.storyID"]];
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"LoadingPreviousDaily" object:nil];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"LoadPreviousDaily" object:nil];
         _isLoading = NO;
     }];
 }
