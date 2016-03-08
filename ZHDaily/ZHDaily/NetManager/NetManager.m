@@ -12,11 +12,12 @@
 
 @implementation NetManager
 
-//
+//base method
 + (void)getJSONDataWithURLString:(NSString *)URLString
                          success:(responseSuccessBlock)success
                          failure:(respoonFailureBlock)failure{
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    
     [manager GET:URLString parameters:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
         
@@ -52,7 +53,7 @@
     }];
 }
 
-
+//获取之前的日报的方法
 + (void)getPreviousNewsWithdate:(NSString *)string
                        success:(responseSuccessBlock)success{
     NSString *previousNewsURL = [kIP_Prefix stringByAppendingString:@"news/before/"];
@@ -64,7 +65,17 @@
     }];
 }
 
-
+//获取日报的story详情
++ (void)getStoryDetailWithId:(NSString *)idString
+                     success:(responseSuccessBlock)success{
+    NSString *news = [kIP_Prefix stringByAppendingString:@"news/"];
+    NSString *storyDetailURL = [news stringByAppendingString:idString];
+    [self getJSONDataWithURLString:storyDetailURL success:^(id JSON) {
+        success(JSON);
+    } failure:^(NSError *error) {
+        NSLog(@"%@", error);
+    }];
+}
 
 
 

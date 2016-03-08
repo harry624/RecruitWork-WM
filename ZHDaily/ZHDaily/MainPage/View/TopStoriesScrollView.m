@@ -11,6 +11,7 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "TopStoriesView.h"
 #import "TopstoriesModel.h"
+#import "UIView+Extension.h"
 
 @interface TopStoriesScrollView () <UIScrollViewDelegate>{
     TopStoriesView *view;
@@ -112,7 +113,10 @@
 }
 
 - (void)updateSubViewOriginY:(CGFloat)value{
-
+    [_pageControl setBottom:260.f - value/2];
+    NSUInteger index = _scrollView.contentOffset.x / kScreenWidth;
+    TopStoriesView *topstoriesView = [_scrollView viewWithTag: index + 100];
+    [topstoriesView.titleLabel setBottom:_pageControl.top];
  }
 
 @end

@@ -8,9 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		05C748FB8933EAA7AF49795E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3052C7DD32AEE939FDCFA1CA /* libPods.a */; };
+		D233F5B61C818E44006C3DFA /* StoryContentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D233F5B51C818E44006C3DFA /* StoryContentModel.m */; };
+		D233F5B91C81A874006C3DFA /* StoryContentViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D233F5B81C81A874006C3DFA /* StoryContentViewModel.m */; };
+		D233F5BC1C81A88D006C3DFA /* StoryContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D233F5BB1C81A88D006C3DFA /* StoryContentViewController.m */; };
 		D2379E711C803052006547A6 /* SectionTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2379E701C803052006547A6 /* SectionTitleView.m */; };
 		D23C5A3F1C7C299800B620A9 /* MainPageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D23C5A3E1C7C299800B620A9 /* MainPageViewModel.m */; };
 		D23C5A441C7C33BE00B620A9 /* NSDateFormatter+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = D23C5A431C7C33BE00B620A9 /* NSDateFormatter+Category.m */; };
+		D243CFE21C809D2700637A2B /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D243CFE11C809D2700637A2B /* UIView+Extension.m */; };
 		D246CDB81C76C4A000A73B16 /* TopStoriesView.m in Sources */ = {isa = PBXBuildFile; fileRef = D246CDB61C76C4A000A73B16 /* TopStoriesView.m */; };
 		D246CDBC1C76C4E400A73B16 /* TopstoriesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D246CDBB1C76C4E400A73B16 /* TopstoriesModel.m */; };
 		D246CDBF1C76C4ED00A73B16 /* StoriesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D246CDBE1C76C4ED00A73B16 /* StoriesModel.m */; };
@@ -31,6 +35,7 @@
 		D27552A41C7D9BA00002DE0D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D27552A31C7D9BA00002DE0D /* QuartzCore.framework */; };
 		D27995B01C79650A0028D2D6 /* StoriesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D27995AE1C79650A0028D2D6 /* StoriesTableViewCell.m */; };
 		D27995B11C79650A0028D2D6 /* StoriesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D27995AF1C79650A0028D2D6 /* StoriesTableViewCell.xib */; };
+		D2DE28001C8EB6760046A1FF /* ToolbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2DE27FF1C8EB6760046A1FF /* ToolbarView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,12 +58,20 @@
 /* Begin PBXFileReference section */
 		3052C7DD32AEE939FDCFA1CA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		60E3C1F16F3A77D23D531A2D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		D233F5B41C818E44006C3DFA /* StoryContentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryContentModel.h; sourceTree = "<group>"; };
+		D233F5B51C818E44006C3DFA /* StoryContentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryContentModel.m; sourceTree = "<group>"; };
+		D233F5B71C81A874006C3DFA /* StoryContentViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryContentViewModel.h; sourceTree = "<group>"; };
+		D233F5B81C81A874006C3DFA /* StoryContentViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryContentViewModel.m; sourceTree = "<group>"; };
+		D233F5BA1C81A88D006C3DFA /* StoryContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryContentViewController.h; sourceTree = "<group>"; };
+		D233F5BB1C81A88D006C3DFA /* StoryContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryContentViewController.m; sourceTree = "<group>"; };
 		D2379E6F1C803052006547A6 /* SectionTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionTitleView.h; sourceTree = "<group>"; };
 		D2379E701C803052006547A6 /* SectionTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionTitleView.m; sourceTree = "<group>"; };
 		D23C5A3D1C7C299800B620A9 /* MainPageViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainPageViewModel.h; sourceTree = "<group>"; };
 		D23C5A3E1C7C299800B620A9 /* MainPageViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainPageViewModel.m; sourceTree = "<group>"; };
 		D23C5A421C7C33BE00B620A9 /* NSDateFormatter+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+Category.h"; sourceTree = "<group>"; };
 		D23C5A431C7C33BE00B620A9 /* NSDateFormatter+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+Category.m"; sourceTree = "<group>"; };
+		D243CFE01C809D2700637A2B /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		D243CFE11C809D2700637A2B /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		D246CDB51C76C4A000A73B16 /* TopStoriesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopStoriesView.h; sourceTree = "<group>"; };
 		D246CDB61C76C4A000A73B16 /* TopStoriesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopStoriesView.m; sourceTree = "<group>"; };
 		D246CDBA1C76C4E400A73B16 /* TopstoriesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopstoriesModel.h; sourceTree = "<group>"; };
@@ -98,6 +111,8 @@
 		D27995AD1C79650A0028D2D6 /* StoriesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoriesTableViewCell.h; sourceTree = "<group>"; };
 		D27995AE1C79650A0028D2D6 /* StoriesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoriesTableViewCell.m; sourceTree = "<group>"; };
 		D27995AF1C79650A0028D2D6 /* StoriesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StoriesTableViewCell.xib; sourceTree = "<group>"; };
+		D2DE27FE1C8EB6760046A1FF /* ToolbarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolbarView.h; sourceTree = "<group>"; };
+		D2DE27FF1C8EB6760046A1FF /* ToolbarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToolbarView.m; sourceTree = "<group>"; };
 		EEF66DB793273872BA026023 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,6 +159,54 @@
 				EEF66DB793273872BA026023 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		D233F5AC1C818DC6006C3DFA /* StoryContentPage */ = {
+			isa = PBXGroup;
+			children = (
+				D233F5AE1C818DFE006C3DFA /* Model */,
+				D233F5AF1C818DFE006C3DFA /* View */,
+				D233F5B01C818DFE006C3DFA /* ViewModel */,
+				D233F5AD1C818DFE006C3DFA /* Controller */,
+			);
+			name = StoryContentPage;
+			path = DetailPage;
+			sourceTree = "<group>";
+		};
+		D233F5AD1C818DFE006C3DFA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D233F5BA1C81A88D006C3DFA /* StoryContentViewController.h */,
+				D233F5BB1C81A88D006C3DFA /* StoryContentViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D233F5AE1C818DFE006C3DFA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D233F5B41C818E44006C3DFA /* StoryContentModel.h */,
+				D233F5B51C818E44006C3DFA /* StoryContentModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D233F5AF1C818DFE006C3DFA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D2DE27FE1C8EB6760046A1FF /* ToolbarView.h */,
+				D2DE27FF1C8EB6760046A1FF /* ToolbarView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D233F5B01C818DFE006C3DFA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D233F5B71C81A874006C3DFA /* StoryContentViewModel.h */,
+				D233F5B81C81A874006C3DFA /* StoryContentViewModel.m */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		D23C5A3C1C7C288900B620A9 /* ViewModel */ = {
@@ -267,6 +330,7 @@
 				D25682AB1C74C52900E76CE6 /* Utility */,
 				D246CDAD1C76BFD400A73B16 /* LeftMenu */,
 				D246CDB11C76C01900A73B16 /* MainPage */,
+				D233F5AC1C818DC6006C3DFA /* StoryContentPage */,
 				D25682A71C74BD7A00E76CE6 /* NetManager */,
 				D25682701C74B8B400E76CE6 /* Supporting Files */,
 			);
@@ -323,6 +387,8 @@
 				D25682AD1C74C53900E76CE6 /* ToolKit.m */,
 				D23C5A421C7C33BE00B620A9 /* NSDateFormatter+Category.h */,
 				D23C5A431C7C33BE00B620A9 /* NSDateFormatter+Category.m */,
+				D243CFE01C809D2700637A2B /* UIView+Extension.h */,
+				D243CFE11C809D2700637A2B /* UIView+Extension.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -517,12 +583,17 @@
 				D25682781C74B8B400E76CE6 /* ViewController.m in Sources */,
 				D23C5A441C7C33BE00B620A9 /* NSDateFormatter+Category.m in Sources */,
 				D23C5A3F1C7C299800B620A9 /* MainPageViewModel.m in Sources */,
+				D243CFE21C809D2700637A2B /* UIView+Extension.m in Sources */,
+				D233F5BC1C81A88D006C3DFA /* StoryContentViewController.m in Sources */,
 				D246CDC21C76CE1F00A73B16 /* TopStoriesScrollView.m in Sources */,
 				D27552A21C7D9B190002DE0D /* RefreshView.m in Sources */,
+				D2DE28001C8EB6760046A1FF /* ToolbarView.m in Sources */,
+				D233F5B61C818E44006C3DFA /* StoryContentModel.m in Sources */,
 				D246CDB81C76C4A000A73B16 /* TopStoriesView.m in Sources */,
 				D246CDBF1C76C4ED00A73B16 /* StoriesModel.m in Sources */,
 				D25682AE1C74C53900E76CE6 /* ToolKit.m in Sources */,
 				D25682AA1C74BDC700E76CE6 /* NetManager.m in Sources */,
+				D233F5B91C81A874006C3DFA /* StoryContentViewModel.m in Sources */,
 				D25682751C74B8B400E76CE6 /* AppDelegate.m in Sources */,
 				D25682721C74B8B400E76CE6 /* main.m in Sources */,
 				D246CDBC1C76C4E400A73B16 /* TopstoriesModel.m in Sources */,

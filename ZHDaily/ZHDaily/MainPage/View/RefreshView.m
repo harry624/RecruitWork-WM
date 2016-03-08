@@ -34,7 +34,7 @@
         [self.layer addSublayer:_grayCircleLayer];
         
         _whiteCircleLayer = [[CAShapeLayer alloc]init];
-        _whiteCircleLayer.lineWidth = 2.0f;
+        _whiteCircleLayer.lineWidth = 1.0f;
         _whiteCircleLayer.strokeColor = [UIColor whiteColor].CGColor;
         _whiteCircleLayer.fillColor = [UIColor clearColor].CGColor;
         _whiteCircleLayer.strokeEnd = 0.f;
@@ -48,6 +48,11 @@
     if (progress > 0) {
         _whiteCircleLayer.opacity = 1.f;
         _grayCircleLayer.opacity = 1.f;
+        _whiteCircleLayer.strokeEnd = progress;
+        if (progress == 1) {
+            _whiteCircleLayer.opacity = 0.f;
+            _grayCircleLayer.opacity = 0.f;
+        }
     }else if (progress <= 0){
         _whiteCircleLayer.opacity = 0.f;
         _grayCircleLayer.opacity = 0.f;

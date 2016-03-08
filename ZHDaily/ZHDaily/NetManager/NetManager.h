@@ -21,4 +21,8 @@ typedef void (^respoonFailureBlock)   (NSError *error);
 
 + (void)getPreviousNewsWithdate:(NSString *)string
                        success:(responseSuccessBlock)success;
+
++ (void)getStoryDetailWithId:(NSString *)idString
+                     success:(responseSuccessBlock)success;
+
 @end

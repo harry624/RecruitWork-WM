@@ -18,9 +18,11 @@
 #import "SectionTitleView.h"
 #import "StoriesTableViewCell.h"
 
+#import "StoryContentViewController.h"
+#import "StoryContentViewModel.h"
+
 @interface MainViewController ()<UITableViewDataSource, UITableViewDelegate,UIScrollViewDelegate>
 
-@property (nonatomic, strong) NSArray <TopstoriesModel *> *topStoiresModelArray;
 @property (nonatomic, strong) MainPageViewModel *viewmodel;
 @property (nonatomic, strong) UITableView *mainTableView;
 @property (nonatomic, strong) TopStoriesScrollView *scrollView;
@@ -184,8 +186,15 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    StoriesModel *model = [self.viewmodel storyAtIndexPath:indexPath];
+    StoryContentViewModel *viewModel = [[StoryContentViewModel alloc]init];
+    viewModel.loadedStoryID = model.storyID;
+    viewModel.storiesID = self.viewmodel.storiesID;
+    StoryContentViewController *viewController = [[StoryContentViewController alloc]initWithViewModel:viewModel];
+    AppDelegate *appdele = [UIApplication sharedApplication].delegate;
+    [appdele.viewController.navigationController pushViewController:viewController animated:YES];
 }
+
 #pragma mark - Scroll View Delegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     if ([scrollView isEqual:_mainTableView]) {

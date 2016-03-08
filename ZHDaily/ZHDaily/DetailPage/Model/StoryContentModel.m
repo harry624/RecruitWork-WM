@@ -1,16 +1,14 @@
 //
-//  StoriesModel.m
+//  StoryDetail.m
 //  ZHDaily
 //
-//  Created by 王豪 on 16/2/19.
+//  Created by 王豪 on 16/2/27.
 //  Copyright © 2016年 hao. All rights reserved.
 //
 
-#import "StoriesModel.h"
+#import "StoryContentModel.h"
 
-@implementation StoriesModel
-
-
+@implementation StoryContentModel
 - (instancetype)initWithDictionary:(NSDictionary *)dic{
     self = [super init];
     if (self) {
@@ -23,10 +21,6 @@
     if ([key isEqualToString:@"id"]) {
         [self setValue:value forKey:@"storyID"];
     }
-    if ([key isEqualToString:@"multipic"]) {
-        [self setValue:value forKey:@"isMultipic"];
-    }
 }
-
 
 @end
